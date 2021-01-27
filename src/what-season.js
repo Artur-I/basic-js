@@ -1,16 +1,16 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function getSeason(date) {
-  if (date == null) return 'Unable to determine the time of year!'
-  let month = date.getMonth()
-  if (Object.prototype.toString.call(date) !== '[object Date]') throw new Error ('Error')
+  if (date == null) return 'Unable to determine the time of year!';
+  let month = date.getMonth();
+  if (Object.prototype.toString.call(date) !== '[object Date]') throw new Error ('Error');
   if (month < 2 || month === 11) {
-    return 'winter'
+    return 'winter';
   } else if (month < 5) {
-    return 'spring'
+    return 'spring';
   } else if (month < 8) {
-    return 'summer'
+    return 'summer';
   } else {
-    return 'autumn'
+    return 'autumn';
   }
 };
